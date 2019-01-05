@@ -1,0 +1,20 @@
+[package]
+name = "StudyRust-Macro"
+version = "0.1.0"
+authors = ["YongJoon Joe <developer@quietjoon.net>"]
+edition = "2018"
+
+[lib]
+name = "StudyRustMacro"
+path = "src/lib.rs"
+edition = "2018"
+
+[dependencies]
+num = "*"
+rand = "*"
+libmath = "*"
+argparse = "*"
+
+[features]
+
+[dev-dependencies]

@@ -10,4 +10,7 @@ fn main() {
     fastp!(buf,"A");
     fastp!(buf,"B {}",1);
     fastp!(buf,"C {} {}",1,2);
+
+    dop!(buf,"D {} {}",1,2);
+    dopl!(buf,"E {} {}",1,2);
 }

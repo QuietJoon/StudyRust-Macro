@@ -40,3 +40,31 @@ macro_rules! fastp {
     }
   }
 }
+
+#[macro_export]
+macro_rules! dop {
+  ($buf:expr, $format:expr) => {
+    if cfg!(debug_assertions) {
+      print!($format);
+    }
+  };
+  ($buf:expr, $format:expr, $($var:expr),*) => {
+    if cfg!(debug_assertions) {
+      print!($format,$($var),*);
+    }
+  }
+}
+
+#[macro_export]
+macro_rules! dopl {
+  ($buf:expr, $format:expr) => {
+    if cfg!(debug_assertions) {
+      println!($format);
+    }
+  };
+  ($buf:expr, $format:expr, $($var:expr),*) => {
+    if cfg!(debug_assertions) {
+      println!($format,$($var),*);
+    }
+  }
+}
